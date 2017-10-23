@@ -51,6 +51,11 @@ public class PongGame {
     private void draw() {
         GL11.glClearColor(0.3f, 0.3f, 0.3f, 1);
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
+
+        drawRect(20, 20, 70, 210);
+        drawRect(730, 20, 780, 210);
+        drawRect(395, 295, 405, 305);
+
     }
 
     private void finish() {
@@ -60,10 +65,21 @@ public class PongGame {
 
     private void drawRect(int xs, int ys, int xe, int ye) {
         GL11.glBegin(GL11.GL_QUADS);
+        GL11.glColor3f(200, 150, 200);
         GL11.glVertex2f(xs, ys);
         GL11.glVertex2f(xs, ye);
         GL11.glVertex2f(xe, ye);
         GL11.glVertex2f(xe, ys);
         GL11.glEnd();
     }
+
+    /*
+    private void drawBall(int x, int y) {
+        GL11.glPointSize(10);
+        GL11.glBegin(GL11.GL_POINTS);
+        GL11.glColor3f(255, 125, 0);
+        GL11.glVertex2f(x, y);
+        GL11.glEnd();
+    }
+    */
 }
