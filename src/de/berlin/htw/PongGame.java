@@ -7,8 +7,6 @@ import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.Display;
 
-import static org.lwjgl.Sys.getTime;
-
 public class PongGame {
 
     private int width = 800;
